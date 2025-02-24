@@ -15,12 +15,12 @@ require 'time'
 
 module OneSignal
   class PlayerNotificationTargetIncludeAliases
-    attr_accessor :alias_label
+    attr_accessor :onesignal_id
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'alias_label' => :'alias_label'
+        :'onesignal_id' => :'onesignal_id'
       }
     end
 
@@ -32,7 +32,7 @@ module OneSignal
     # Attribute type mapping.
     def self.openapi_types
       {
-        :'alias_label' => :'Array<String>'
+        :'onesignal_id' => :'Array<String>'
       }
     end
 
@@ -57,9 +57,9 @@ module OneSignal
         h[k.to_sym] = v
       }
 
-      if attributes.key?(:'alias_label')
-        if (value = attributes[:'alias_label']).is_a?(Array)
-          self.alias_label = value
+      if attributes.key?(:'onesignal_id')
+        if (value = attributes[:'onesignal_id']).is_a?(Array)
+          self.onesignal_id = value
         end
       end
     end
@@ -82,7 +82,7 @@ module OneSignal
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          alias_label == o.alias_label
+          onesignal_id == o.onesignal_id
     end
 
     # @see the `==` method
@@ -94,7 +94,7 @@ module OneSignal
     # Calculates hash code according to all attributes.
     # @return [Integer] Hash code
     def hash
-      [alias_label].hash
+      [onesignal_id].hash
     end
 
     # Builds the object from hash
